@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt update && sudo apt upgrade
-apt install git python3-pip build-essential wget python3-dev python3-venv python3-wheel libfreetype6-dev libxml2-dev libzip-dev libldap2-dev libsasl2-dev python3-setuptools node-less libjpeg-dev zlib1g-dev libpq-dev libxslt1-dev libldap2-dev libtiff5-dev libjpeg8-dev libopenjp2-7-dev liblcms2-dev libwebp-dev libharfbuzz-dev libfribidi-dev libxcb1-dev xfonts-base xfonts-75dpi libstdc++6 postgresql postgresql-client
+apt install git python3 sudo nano python3-pip build-essential wget python3-dev python3-venv python3-wheel libfreetype6-dev libxml2-dev libzip-dev libldap2-dev libsasl2-dev python3-setuptools node-less libjpeg-dev zlib1g-dev libpq-dev libxslt1-dev libldap2-dev libtiff5-dev libjpeg8-dev libopenjp2-7-dev liblcms2-dev libwebp-dev libharfbuzz-dev libfribidi-dev libxcb1-dev xfonts-base xfonts-75dpi libstdc++6 postgresql postgresql-client
 useradd -m -d /opt/odoo -U -r -s /bin/bash odoo
 echo -e "\e[1;32m@@@@@ DEPENDENCIAS INSTALADAS @@@@@"
 echo -e "\e[1;32m@@@@@ SE HA CREADO UN NUEVO USUARIO ODOO, INGRESA UNA CONTRASEÑA @@@@@\e[0m"
@@ -12,7 +12,7 @@ mkdir /opt/odoo/odoo-Builds
 wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb -P /opt/odoo/odoo-Builds/
 dpkg -i /opt/odoo/odoo-Builds/wkhtmltox_0.12.5-1.bionic_amd64.deb
 echo -e "\e[1;32m@@@@@ WKHTMLTOPDF INSTALADO  @@@@@\e[0m"
-# su - odoo
+su - odoo
 git clone https://www.github.com/odoo/odoo --depth 1 --branch 15.0 /opt/odoo/odoo-server
 python3 -m venv /opt/odoo/odoo-venv
 source /opt/odoo/odoo-venv/bin/activate
