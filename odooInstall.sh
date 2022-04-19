@@ -25,7 +25,7 @@ echo -e "[options] \n
 db_host = False \n
 db_port = False \n
 db_user = odoo  \n
-db_passwd = False
+db_passwd = False \n
 addons_path = /opt/odoo/odoo-server/addons,/opt/odoo/odoo-custom-addons" > /etc/odoo.conf
 echo -e "[Unit] \n
 Description=Odoo \n
