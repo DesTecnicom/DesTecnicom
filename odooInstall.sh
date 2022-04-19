@@ -25,7 +25,8 @@ echo -e "[options] \n
 db_host = False \n
 db_port = False \n
 db_user = odoo  \n
-db_passwd = /opt/odoo/odoo-server/addons,/opt/odoo/odoo-custom-addons" > /etc/odoo.conf
+db_passwd = False
+addons_path = /opt/odoo/odoo-server/addons,/opt/odoo/odoo-custom-addons" > /etc/odoo.conf
 echo -e "[Unit] \n
 Description=Odoo \n
 Requires=postgresql.service \n
